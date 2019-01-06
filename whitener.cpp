@@ -13,6 +13,11 @@ int main()
     cout << endl;
 
     path p("icons/");
+    if (!exists(p))
+    {
+        cout << "Icons folder doesn't exist" << endl;
+        exit(1);
+    }
     directory_iterator end;
 
     cout << "Whitened icons:" << endl;
